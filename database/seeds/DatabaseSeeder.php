@@ -196,7 +196,7 @@ class DatabaseSeeder extends Seeder {
         $a21->nombre = "Charles Robert";
         $a21->apellido = "Redford";
         $a21->fechaNacimiento = "18 de agosto 1936";
-        $a2->lugarNacimiento = "Santa Mónica, California";
+        $a21->lugarNacimiento = "Santa Mónica, California";
         $a21->save();
         
         $a22 = new Actor;  
@@ -266,7 +266,7 @@ class DatabaseSeeder extends Seeder {
         $a31->nombre = "Estelle Louise";
         $a31->apellido = "Fletcher";
         $a31->fechaNacimiento = "22 de julio de 1934";
-        $a3->lugarNacimiento = "Birmingham, Alabama";
+        $a31->lugarNacimiento = "Birmingham, Alabama";
         $a31->save();
         
         $a32 = new Actor;  
