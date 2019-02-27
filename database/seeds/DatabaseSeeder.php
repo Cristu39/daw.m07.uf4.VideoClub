@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Movie;
 use App\User;
+use App\Actor;
 
 class DatabaseSeeder extends Seeder {
 
@@ -17,6 +18,8 @@ class DatabaseSeeder extends Seeder {
         $this->command->info('Tabla usuarios inicializada con datos!');
         self::seedCatalog();
         $this->command->info('Tabla catálogo inicializada con datos!');
+        self::seedActors();
+        $this->command->info('Tabla actores inicializada con datos!');
     }
     
     private function seedUsers(){
@@ -46,7 +49,485 @@ class DatabaseSeeder extends Seeder {
             $p->save();
         }
     }
-
+    
+    private function seedActors(){
+        DB::table('actors')->delete();
+        $a1 = new Actor;
+        $a1->nombre = "Marlon";
+        $a1->apellido = "Brando";
+        $a1->fechaNacimiento = "3 de abril de 1924";
+        $a1->lugarNacimiento = "Los Ángeles, California";
+        $a1->save();
+        
+        $a2 = new Actor;  
+        $a2->nombre = "Alfredo James";
+        $a2->apellido = "Pacino";
+        $a2->fechaNacimiento = "25 de abril de 1940";
+        $a2->lugarNacimiento = "Nueva York";
+        $a2->save();
+        
+        $a3 = new Actor;  
+        $a3->nombre = "James Edmund";
+        $a3->apellido = "Caan";
+        $a3->fechaNacimiento = "26 de marzo de 1940";
+        $a3->lugarNacimiento = "Bronx, Nueva York";
+        $a3->save();
+        
+        $a4 = new Actor;  
+        $a4->nombre = "Richard Salvatore";
+        $a4->apellido = "Castellano";
+        $a4->fechaNacimiento = "4 de septiembre de 1933";
+        $a4->lugarNacimiento = "Bronx, Nueva York";
+        $a4->save();
+        
+        $a5 = new Actor;  
+        $a5->nombre = "Robert";
+        $a5->apellido = "Duvall";
+        $a5->fechaNacimiento = "5 de enero de 1931";
+        $a5->lugarNacimiento = "San Diego, California";
+        $a5->save();
+        
+        $a6 = new Actor;  
+        $a6->nombre = "Diane";
+        $a6->apellido = "Keaton";
+        $a6->fechaNacimiento = "5 de enero de 1946";
+        $a6->lugarNacimiento = "Los Ángeles";
+        $a6->save();
+        
+        $a7 = new Actor;  
+        $a7->nombre = "Robert Anthony";
+        $a7->apellido = "De Niro";
+        $a7->fechaNacimiento = "17 de agosto de 1943";
+        $a7->lugarNacimiento = "Nueva York";
+        $a7->save();
+        
+        $a8 = new Actor;  
+        $a8->nombre = "William John";
+        $a8->apellido = "Neeson";
+        $a8->fechaNacimiento = "7 de junio de 1952";
+        $a8->lugarNacimiento = "Ballymena, Antrim, Irlanda del Norte";
+        $a8->save();
+        
+        $a9 = new Actor;  
+        $a9->nombre = "Ben";
+        $a9->apellido = "Kingsley";
+        $a9->fechaNacimiento = "31 de diciembre de 1943";
+        $a9->lugarNacimiento = "Scarborough, Yorkshire, Inglaterra";
+        $a9->save();
+        
+        $a10 = new Actor;  
+        $a10->nombre = "Ralph Nathaniel";
+        $a10->apellido = "Fiennes";
+        $a10->fechaNacimiento = "22 de diciembre de 1962";
+        $a10->lugarNacimiento = "Suffolk, Inglaterra";
+        $a10->save();
+        
+        $a11 = new Actor;  
+        $a11->nombre = "Caroline";
+        $a11->apellido = "Goodall";
+        $a11->fechaNacimiento = "31 de noviembre de 1959";
+        $a11->lugarNacimiento = "Londres, Inglaterra";
+        $a11->save();
+        
+        $a12 = new Actor;  
+        $a12->nombre = "John";
+        $a12->apellido = "Travolta";
+        $a12->fechaNacimiento = "18 de febrero de 1954";
+        $a12->lugarNacimiento = "Englewood, Nueva Jersey";
+        $a12->save();
+        
+        $a13 = new Actor;  
+        $a13->nombre = "Uma Karuna";
+        $a13->apellido = "Thruman";
+        $a13->fechaNacimiento = "29 de abril de 1970";
+        $a13->lugarNacimiento = "Boston";
+        $a13->save();
+        
+        $a14 = new Actor;  
+        $a14->nombre = "Samuel Leroy";
+        $a14->apellido = "Jackson";
+        $a14->fechaNacimiento = "21 de diciembre de 1948";
+        $a14->lugarNacimiento = "Washington D.C.";
+        $a14->save();
+        
+        $a15 = new Actor;  
+        $a15->nombre = "Walter Bruce";
+        $a15->apellido = "Willis";
+        $a15->fechaNacimiento = "19 de marzo 1955";
+        $a15->lugarNacimiento = "Idar-Oberstein, Alemania";
+        $a15->save();
+        
+        $a16 = new Actor;  
+        $a16->nombre = "Tim";
+        $a16->apellido = "Robbins";
+        $a16->fechaNacimiento = "16 de octubre 1958";
+        $a16->lugarNacimiento = "West Covina, California";
+        $a16->save();
+        
+        $a17 = new Actor;  
+        $a17->nombre = "Morgan";
+        $a17->apellido = "Freeman";
+        $a17->fechaNacimiento = "1 de junio 1937";
+        $a17->lugarNacimiento = "Memphis, Tennessee";
+        $a17->save();
+        
+        $a18 = new Actor;  
+        $a18->nombre = "Bob";
+        $a18->apellido = "Gunton";
+        $a18->fechaNacimiento = "15 de noviembre 1945";
+        $a18->lugarNacimiento = "Santa Mónica, California";
+        $a18->save();
+        
+        $a19 = new Actor;  
+        $a19->nombre = "William";
+        $a19->apellido = "Sadler";
+        $a19->fechaNacimiento = "13 de abril 1950";
+        $a19->lugarNacimiento = "Buffalo, Nueva York";
+        $a19->save();
+        
+        $a20 = new Actor;  
+        $a20->nombre = "Paul";
+        $a20->apellido = "Newman";
+        $a20->fechaNacimiento = "26 de enero 1925";
+        $a20->lugarNacimiento = "Shaker Heights, Ohio";
+        $a20->save();
+        
+        $a21 = new Actor;  
+        $a21->nombre = "Charles Robert";
+        $a21->apellido = "Redford";
+        $a21->fechaNacimiento = "18 de agosto 1936";
+        $a2->lugarNacimiento = "Santa Mónica, California";
+        $a21->save();
+        
+        $a22 = new Actor;  
+        $a22->nombre = "Robert Archibald";
+        $a22->apellido = "Shaw";
+        $a22->fechaNacimiento = "9 de agosto 1927";
+        $a22->lugarNacimiento = "Westhoughton, Reino Unido";
+        $a22->save();
+        
+        $a23 = new Actor;  
+        $a23->nombre = "Charles";
+        $a23->apellido = "Durning";
+        $a23->fechaNacimiento = "28 de febrero de 1923";
+        $a23->lugarNacimiento = "Highland Falls, Nueva York";
+        $a23->save();
+        
+        $a24 = new Actor;  
+        $a24->nombre = "Roberto Remigio";
+        $a24->apellido = "Benigni";
+        $a24->fechaNacimiento = "27 de octubre de 1952";
+        $a24->lugarNacimiento = "Castiglion Fiorentino, Italia";
+        $a24->save();
+        
+        $a25 = new Actor;  
+        $a25->nombre = "Giorgio";
+        $a25->apellido = "Cantarini";
+        $a25->fechaNacimiento = "12 de abril de 1992";
+        $a25->lugarNacimiento = "Orvieto, Italia";
+        $a25->save();
+        
+        $a26 = new Actor;  
+        $a26->nombre = "Giorgio";
+        $a26->apellido = "Durano ";
+        $a26->fechaNacimiento = "5 de mayo 1923";
+        $a26->lugarNacimiento = "Brindisi, Italia";
+        $a26->save();
+        
+        $a27 = new Actor;  
+        $a27->nombre = "Ray";
+        $a27->apellido = "Liotta";
+        $a27->fechaNacimiento = "18 de diciembre de 1954";
+        $a27->lugarNacimiento = "Newark, Nueva Jersey";
+        $a27->save();
+        
+        $a28 = new Actor;  
+        $a28->nombre = "Joseph Frank";
+        $a28->apellido = "Pesci";
+        $a28->fechaNacimiento = "9 de febrero de 1943";
+        $a28->lugarNacimiento = "Newark, Nueva Jersey";
+        $a28->save();
+        
+        $a29 = new Actor;  
+        $a29->nombre = "Lorraine";
+        $a29->apellido = "Bracco";
+        $a29->fechaNacimiento = "2 de octubre de 1954";
+        $a29->lugarNacimiento = "Brooklyn, Nueva York";
+        $a29->save();
+        
+        $a30 = new Actor;  
+        $a30->nombre = "John Joseph «Jack»";
+        $a30->apellido = "Nicholson";
+        $a30->fechaNacimiento = "22 de abril de 1937";
+        $a30->lugarNacimiento = "Neptune City, Nueva Jersey";
+        $a30->save();
+        
+        $a31 = new Actor;  
+        $a31->nombre = "Estelle Louise";
+        $a31->apellido = "Fletcher";
+        $a31->fechaNacimiento = "22 de julio de 1934";
+        $a3->lugarNacimiento = "Birmingham, Alabama";
+        $a31->save();
+        
+        $a32 = new Actor;  
+        $a32->nombre = "Dean Kent";
+        $a32->apellido = "Brooks";
+        $a32->fechaNacimiento = "26 de julio de 1916";
+        $a32->lugarNacimiento = "Colony, Kansas";
+        $a32->save();
+        
+        $a33 = new Actor;  
+        $a33->nombre = "Edward Harrison";
+        $a33->apellido = "Norton";
+        $a33->fechaNacimiento = "18 de agosto de 1969";
+        $a33->lugarNacimiento = "Boston, Massachusetts";
+        $a33->save();
+        
+        $a34 = new Actor;  
+        $a34->nombre = "Edward Walter";
+        $a34->apellido = "Furlong";
+        $a34->fechaNacimiento = "2 de agosto de 1977";
+        $a34->lugarNacimiento = "Glendale, California";
+        $a34->save();
+        
+        $a35 = new Actor;  
+        $a35->nombre = "Beverly";
+        $a35->apellido = "D'Angelo";
+        $a35->fechaNacimiento = "15 de noviembre de 1951";
+        $a35->lugarNacimiento = "Columbus, Ohio";
+        $a35->save();
+        
+        $a36 = new Actor;  
+        $a36->nombre = "Jennifer Anne";
+        $a36->apellido = "Lien";
+        $a36->fechaNacimiento = "24 de agosto de 1974";
+        $a36->lugarNacimiento = "Palos Heights, Estados Unidos";
+        $a36->save();
+        
+        $a37 = new Actor;  
+        $a37->nombre = "Clinton «Clint»";
+        $a37->apellido = "Eastwood";
+        $a37->fechaNacimiento = "31 de mayo de 1930";
+        $a37->lugarNacimiento = "San Francisco, California";
+        $a37->save();
+        
+        $a38 = new Actor;  
+        $a38->nombre = "Eugene Allen";
+        $a38->apellido = "Hackman";
+        $a38->fechaNacimiento = "30 de enero de 1930";
+        $a38->lugarNacimiento = "San Bernardino, California";
+        $a38->save();
+        
+        $a39 = new Actor;  
+        $a39->nombre = "Richard";
+        $a39->apellido = "Harris";
+        $a39->fechaNacimiento = "1 de octubre de 1930";
+        $a39->lugarNacimiento = "Londres";
+        $a39->save();
+        
+        $a40 = new Actor;  
+        $a40->nombre = "Esteban Echevarría 'Steven'";
+        $a40->apellido = "Echevarría 'Bauer'";
+        $a40->fechaNacimiento = "2 de diciembre de 1956";
+        $a40->lugarNacimiento = "La Habana, Cuba";
+        $a40->save();
+        
+        $a41 = new Actor;  
+        $a41->nombre = "Michelle Marie";
+        $a41->apellido = "Pfeiffer";
+        $a41->fechaNacimiento = "29 de abril de 1958";
+        $a41->lugarNacimiento = "Santa Ana, California";
+        $a41->save();
+        
+        $a42 = new Actor;  
+        $a42->nombre = "Adrien";
+        $a42->apellido = "Brody";
+        $a42->fechaNacimiento = "14 de abril de 1973";
+        $a42->lugarNacimiento = "Nueva York";
+        $a42->save();
+        
+        $a43 = new Actor;  
+        $a43->nombre = "Thomas";
+        $a43->apellido = "Kretschmann";
+        $a43->fechaNacimiento = "8 de septiembre de 1962";
+        $a43->lugarNacimiento = "Dessau, Alemania";
+        $a43->save();
+        
+        $a44 = new Actor;  
+        $a44->nombre = "Francis 'Frank'";
+        $a44->apellido = "Finlay";
+        $a44->fechaNacimiento = "6 de agosto de 1926";
+        $a44->lugarNacimiento = "Lancashire, Inglaterra";
+        $a44->save();
+        
+        $a45 = new Actor;  
+        $a45->nombre = "Maureen";
+        $a45->apellido = "Lipman";
+        $a45->fechaNacimiento = "10 de mayo de 1946";
+        $a45->lugarNacimiento = "Hull, Inglaterra";
+        $a45->save();
+        
+        $a46 = new Actor;  
+        $a46->nombre = "William Bradley";
+        $a46->apellido = "Pitt";
+        $a46->fechaNacimiento = "18 de diciembre de 1963";
+        $a46->lugarNacimiento = "Shawnee, Oklahoma";
+        $a46->save();
+        
+        $a47 = new Actor;  
+        $a47->nombre = "Gwyneth Kate";
+        $a47->apellido = "Paltrow";
+        $a47->fechaNacimiento = "27 de septiembre de 1972";
+        $a47->lugarNacimiento = "Los Ángeles";
+        $a47->save();
+        
+        $a48 = new Actor;  
+        $a48->nombre = "Kevin";
+        $a48->apellido = "Fowler";
+        $a48->fechaNacimiento = "26 de julio de 1959";
+        $a48->lugarNacimiento = "South Orange, Nueva Jersey";
+        $a48->save();
+        
+        $a49 = new Actor;  
+        $a49->nombre = "Alicia Christian";
+        $a49->apellido = "Foster";
+        $a49->fechaNacimiento = "19 de noviembre de 1962";
+        $a49->lugarNacimiento = "Los Ángeles, California";
+        $a49->save();
+        
+        $a50 = new Actor;  
+        $a50->nombre = "Philip Anthony";
+        $a50->apellido = "Hopkins";
+        $a50->fechaNacimiento = "31 de diciembre de 1937";
+        $a50->lugarNacimiento = "Margam, Port Talbot, Gales";
+        $a50->save();
+        
+        $a51 = new Actor;  
+        $a51->nombre = "Theodore Scott";
+        $a51->apellido = "Glen";
+        $a51->fechaNacimiento = "26 de enero de 1941";
+        $a51->lugarNacimiento = "Pittsburgh, Pennsylvania";
+        $a51->save();
+        
+        $a52 = new Actor;  
+        $a52->nombre = "Anthony";
+        $a52->apellido = "Heald";
+        $a52->fechaNacimiento = "25 de agosto de 1944";
+        $a52->lugarNacimiento = "New Rochelle, New York";
+        $a52->save();
+        
+        $a53 = new Actor;  
+        $a53->nombre = "Malcolm";
+        $a53->apellido = "McDowell";
+        $a53->fechaNacimiento = "13 de junio de 1943";
+        $a53->lugarNacimiento = "Horsforth, Yorkshire";
+        $a53->save();
+        
+        $a54 = new Actor;  
+        $a54->nombre = "Warren";
+        $a54->apellido = "Clarke";
+        $a54->fechaNacimiento = "26 de abril de 1947";
+        $a54->lugarNacimiento = "Oldham, Inglaterra";
+        $a54->save();
+        
+        $a55 = new Actor;  
+        $a55->nombre = "Michael";
+        $a55->apellido = "Tarn";
+        $a55->fechaNacimiento = "18 de diciembre de 1953";
+        $a55->lugarNacimiento = "Inglaterra";
+        $a55->save();
+        
+        $a56 = new Actor;  
+        $a56->nombre = "James";
+        $a56->apellido = "Marcus";
+        $a56->fechaNacimiento = "23 de junio de 1942";
+        $a56->lugarNacimiento = "Essex, Inglaterra";
+        $a56->save();
+        
+        $a57 = new Actor;  
+        $a57->nombre = "Matthew";
+        $a57->apellido = "Modine";
+        $a57->fechaNacimiento = "22 de marzo de 1959";
+        $a57->lugarNacimiento = "Loma Linda, California";
+        $a57->save();
+        
+        $a58 = new Actor;  
+        $a58->nombre = "Adam";
+        $a58->apellido = "Baldwin";
+        $a58->fechaNacimiento = "27 de febrero de 1962";
+        $a58->lugarNacimiento = "Winnetka, Illinois";
+        $a58->save();
+        
+        $a59 = new Actor;  
+        $a59->nombre = "Vincent";
+        $a59->apellido = "D'Onofrio";
+        $a59->fechaNacimiento = "30 de junio de 1959";
+        $a59->lugarNacimiento = "Brooklyn, Nueva York";
+        $a59->save();
+        
+        $a60 = new Actor;  
+        $a60->nombre = "Ronald Lee";
+        $a60->apellido = "Ermey";
+        $a60->fechaNacimiento = "24 de marzo de 1944";
+        $a60->lugarNacimiento = "Emporia, Kansas";
+        $a60->save();
+        
+        $a61 = new Actor;  
+        $a61->nombre = "Harrison";
+        $a61->apellido = "Ford";
+        $a61->fechaNacimiento = "13 de julio de 1942";
+        $a61->lugarNacimiento = "Chicago";
+        $a61->save();
+        
+        $a62 = new Actor;  
+        $a62->nombre = "Rutger Oelsen";
+        $a62->apellido = "Hauer";
+        $a62->fechaNacimiento = "23 de enero de 1944";
+        $a62->lugarNacimiento = "Breukelen, Paises Bajos";
+        $a62->save();
+        
+        $a63 = new Actor;  
+        $a63->nombre = "Sean";
+        $a63->apellido = "Young";
+        $a63->fechaNacimiento = "20 de noviembre de 1959";
+        $a63->lugarNacimiento = "Louisville, Kentucky";
+        $a63->save();
+        
+        $a64 = new Actor;  
+        $a64->nombre = "Edward James";
+        $a64->apellido = "Olmos";
+        $a64->fechaNacimiento = "24 de febrero de 1947";
+        $a64->lugarNacimiento = "Los Ángeles, California";
+        $a64->save();
+        
+        $a65 = new Actor;  
+        $a65->nombre = "Cybill";
+        $a65->apellido = "Shepherd";
+        $a65->fechaNacimiento = "18 de febrero de 1950";
+        $a65->lugarNacimiento = "Memphis, Tennessee";
+        $a65->save();
+        
+        $a66 = new Actor;  
+        $a66->nombre = "Albert Lawrence";
+        $a66->apellido = "Brooks";
+        $a66->fechaNacimiento = "22 de julio de 1947";
+        $a66->lugarNacimiento = "Beverly Hills, Los Ángeles";
+        $a66->save();
+        
+        $a67 = new Actor;  
+        $a67->nombre = "Helena Bonham";
+        $a67->apellido = "Carter";
+        $a67->fechaNacimiento = "26 de mayo de 1966";
+        $a67->lugarNacimiento = "Londres, Inglaterra";
+        $a67->save();
+        
+        $a68 = new Actor;  
+        $a68->nombre = "Meat";
+        $a68->apellido = "Loaf";
+        $a68->fechaNacimiento = "27 de septiembre de 1947";
+        $a68->lugarNacimiento = "Dallas, Texas";
+        $a68->save();
+    }
     var $arrayPeliculas = array(
         array(
             'title' => 'El padrino',
