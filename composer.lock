@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7904d07d1e1765a0a199aa11d6301a3",
+    "content-hash": "4efaee83fae9a0c373a6d7a7e4283c88",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -159,6 +159,55 @@
                 "parser"
             ],
             "time": "2014-09-09T13:34:57+00:00"
+        },
+        {
+            "name": "edvinaskrucas/notification",
+            "version": "5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/edvinaskrucas/notification.git",
+                "reference": "f8172fb48397483004fbbf0a8825d20dde696810"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/edvinaskrucas/notification/zipball/f8172fb48397483004fbbf0a8825d20dde696810",
+                "reference": "f8172fb48397483004fbbf0a8825d20dde696810",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": "^5.4",
+                "illuminate/support": "^5.4",
+                "php": "^5.6|^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Krucas\\Notification": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Edvinas Kručas",
+                    "email": "edv.krucas@gmail.com"
+                }
+            ],
+            "description": "Package for Laravel for helping to manage flash / instant notifications / messages.",
+            "keywords": [
+                "flash",
+                "instant",
+                "laravel",
+                "messages",
+                "notifications"
+            ],
+            "time": "2017-03-27T19:30:18+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -766,6 +815,43 @@
                 "psr-3"
             ],
             "time": "2018-11-05T09:00:11+00:00"
+        },
+        {
+            "name": "mpociot/laravel-composite-key",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mpociot/laravel-composite-key.git",
+                "reference": "520e33c6ed01be0ed377e56ab2706d9e1c56bd60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpociot/laravel-composite-key/zipball/520e33c6ed01be0ed377e56ab2706d9e1c56bd60",
+                "reference": "520e33c6ed01be0ed377e56ab2706d9e1c56bd60",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "5.*",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mpociot\\HasCompositeKey\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "m.pociot@gmail.com"
+                }
+            ],
+            "description": "Support composite keys in your laravel app.",
+            "time": "2016-05-17T20:11:04+00:00"
         },
         {
             "name": "mtdowling/cron-expression",
