@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Movie;
 use App\User;
+use App\Galardon;
 
 class DatabaseSeeder extends Seeder {
 
@@ -17,6 +18,8 @@ class DatabaseSeeder extends Seeder {
         $this->command->info('Tabla usuarios inicializada con datos!');
         self::seedCatalog();
         $this->command->info('Tabla catálogo inicializada con datos!');
+        self::seedGalardon();
+        $this->command->info('Tabla galardón inicializada con datos!');
     }
     
     private function seedUsers(){
@@ -45,6 +48,219 @@ class DatabaseSeeder extends Seeder {
             $p->synopsis = $pelicula['synopsis'];
             $p->save();
         }
+    }
+    
+    private function seedGalardon(){
+        //Padrino
+        DB::table('galardon')->delete();
+        $g1 = new Galardon;
+        $g1->titulo = "Oscar a la mejor película.";
+        $g1->anyo = 1972;
+        $g1->movie_id = 1;
+        $g1->save();
+        
+        $g2 = new Galardon;
+        $g2->titulo = "Oscar al mejor guión adaptado.";
+        $g2->anyo = 1972;
+        $g2->movie_id = 1;
+        $g2->save();
+        
+        //Padrino2
+        $g3 = new Galardon;
+        $g3->titulo = "Oscar a la mejor película.";
+        $g3->anyo = 1974;
+        $g3->movie_id = 2;
+        $g3->save();
+        
+        $g4 = new Galardon;
+        $g4->titulo = "Oscar al mejor guión adaptado.";
+        $g4->anyo = 1974;
+        $g4->movie_id = 2;
+        $g4->save();
+        
+        //Lista Schindler
+        $g5 = new Galardon;
+        $g5->titulo = "Oscar a la mejor película.";
+        $g5->anyo = 1993;
+        $g5->movie_id = 3;
+        $g5->save();
+        
+        $g6 = new Galardon;
+        $g6->titulo = "Oscar a la mejor dirección.";
+        $g6->anyo = 1993;
+        $g6->movie_id = 3;
+        $g6->save();
+        
+        //Pulp fiction
+        $g7 = new Galardon;
+        $g7->titulo = "Oscar al mejor guion original.";
+        $g7->anyo = 1994;
+        $g7->movie_id = 4;
+        $g7->save();
+        
+        $g8 = new Galardon;
+        $g8->titulo = "Globo de oro al mejor guion.";
+        $g8->anyo = 1994;
+        $g8->movie_id = 4;
+        $g8->save();
+        
+        //Cadena perpetua
+        
+        //El golpe
+        $g9 = new Galardon;
+        $g9->titulo = "Oscar a la mejor película.";
+        $g9->anyo = 1973;
+        $g9->movie_id = 6;
+        $g9->save();
+        
+        $g10 = new Galardon;
+        $g10->titulo = "Oscar al mejor montaje.";
+        $g10->anyo = 1973;
+        $g10->movie_id = 6;
+        $g10->save();
+        
+        //La vida es bella
+        $g11 = new Galardon;
+        $g11->titulo = "Oscar a la mejor película de habla no inglesa.";
+        $g11->anyo = 1997;
+        $g11->movie_id = 7;
+        $g11->save();
+        
+        $g12 = new Galardon;
+        $g12->titulo = "Oscar a la mejor banda sonora - drama.";
+        $g12->anyo = 1997;
+        $g12->movie_id = 7;
+        $g12->save();
+        
+        //Uno de los nuestros
+        $g13 = new Galardon;
+        $g13->titulo = "Premio BAFTA a la mejor película.";
+        $g13->anyo = 1990;
+        $g13->movie_id = 8;
+        $g13->save();
+        
+        $g14 = new Galardon;
+        $g14->titulo = "Premio BAFTA al mejor diseño de vestuario.";
+        $g14->anyo = 1990;
+        $g14->movie_id = 8;
+        $g14->save();
+        
+        //nido cuco
+        $g15 = new Galardon;
+        $g15->titulo = "Oscar a la mejor película.";
+        $g15->anyo = 1975;
+        $g15->movie_id = 9;
+        $g15->save();
+        
+        $g16 = new Galardon;
+        $g16->titulo = "Globo de oro al mejor guión.";
+        $g16->anyo = 1975;
+        $g16->movie_id = 9;
+        $g16->save();
+        
+        //American history x
+        $g17 = new Galardon;
+        $g17->titulo = "Premio Satellite a la mejor actuación en cine - Drama.";
+        $g17->anyo = 1999;
+        $g17->movie_id = 10;
+        $g17->save();
+        
+        //Sin perdon
+        $g18 = new Galardon;
+        $g18->titulo = "Oscar a la mejor película.";
+        $g18->anyo = 1992;
+        $g18->movie_id = 11;
+        $g18->save();
+        
+        $g19 = new Galardon;
+        $g19->titulo = "Globo de oro a la mejor dirección.";
+        $g19->anyo = 1992;
+        $g19->movie_id = 11;
+        $g19->save();
+        
+        //el precio del poder
+        
+        //el pianista
+        $g20 = new Galardon;
+        $g20->titulo = "Oscar al mejor guion adaptado.";
+        $g20->anyo = 2002;
+        $g20->movie_id = 13;
+        $g20->save();
+        
+        $g21 = new Galardon;
+        $g21->titulo = "Premio César a la mejor película.";
+        $g21->anyo = 2002;
+        $g21->movie_id = 13;
+        $g21->save();
+        
+        $g22 = new Galardon;
+        $g22->titulo = "Premio César al mejor sonido.";
+        $g22->anyo = 2002;
+        $g22->movie_id = 13;
+        $g22->save();
+        
+        //seven
+        $g23 = new Galardon;
+        $g23->titulo = "MTV Movie Award a la mejor película.";
+        $g23->anyo = 1996;
+        $g23->movie_id = 14;
+        $g23->save();
+        
+        //silencio corderos
+        $g24 = new Galardon;
+        $g24->titulo = "Oscar a la mejor película.";
+        $g24->anyo = 1991;
+        $g24->movie_id = 15;
+        $g24->save();
+        
+        $g25 = new Galardon;
+        $g25->titulo = "Premio Saturn a la mejor película de terror.";
+        $g25->anyo = 1992;
+        $g25->movie_id = 15;
+        $g25->save();
+        
+        $g26 = new Galardon;
+        $g26->titulo = "Premio Saturn al mejor guion.";
+        $g26->anyo = 1992;
+        $g26->movie_id = 15;
+        $g26->save();
+        
+        //naranja mecanica
+        
+        //chaqueta metalica
+        $g27 = new Galardon;
+        $g27->titulo = "Premio David de Donatello al mejor productor para película extranjera.";
+        $g27->anyo = 1988;
+        $g27->movie_id = 17;
+        $g27->save();
+        
+        //blade runner
+        $g28 = new Galardon;
+        $g28->titulo = "Premio BAFTA al mejor diseño de vestuario.";
+        $g28->anyo = 1983;
+        $g28->movie_id = 18;
+        $g28->save();
+        
+        $g29 = new Galardon;
+        $g29->titulo = "Premio BAFTA al mejor diseño de producción.";
+        $g29->anyo = 1983;
+        $g29->movie_id = 18;
+        $g29->save();
+        
+        //taxi driver
+        $g30 = new Galardon;
+        $g30->titulo = "Premio BAFTA a la mejor música original.";
+        $g30->anyo = 1976;
+        $g30->movie_id = 19;
+        $g30->save();
+        
+        $g31 = new Galardon;
+        $g31->titulo = "Premio Palma de Oro en el Festival de Cine de Cannes a la mejor película.";
+        $g31->anyo = 1976;
+        $g31->movie_id = 19;
+        $g31->save();
+        
+        //club de la lucha
     }
 
     var $arrayPeliculas = array(

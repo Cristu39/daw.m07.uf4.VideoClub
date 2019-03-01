@@ -8,4 +8,6 @@ class Galardon extends Model{
     use HasCompositeKey;
     
     protected $primaryKey = ['titulo','anyo'];
+    
+    protected $table = "galardon";
 }
